@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Hair & Makeup</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/main.css"/>
+        <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
+
+
+    </head>
+
+    <body>
+
+        <div class="topmenu">
+            <a href="index.html">Home</a>
+            <a href="sets.html">Sets</a>
+            <a href="costuming.html">Costuming</a>
+            <a href="hairandmakeup.html">Hair & Makeup</a>
+            <a href="props.html">Props</a>
+        </div>
+
+        <div class="header">
+            <H1>Hair & Makeup</H1>
+            <section class="filters">
+                <button data-year="*">All</button>
+                <button data-year=".y1970s">1970s</button>
+                <button data-year=".y1980s">1980s</button>
+                <button data-year=".y1990s">1990s</button>
+                <button data-year=".y2000s">2000s</button>
+                <button data-year=".y2010s">2010s</button>
+                <button data-year=".y2020s">2020s</button>
+        </section>
+        </div>
+
+        <div class="container">
+            <div class="rectangle y2020s">
+                <a href="EEAAOhair.html" target="Everything Everywhere All At Once Hair & Makeup">
+                <img src="images/EEAAO_hair1.png" alt="Everything Everywhere All At Once Hair & Makeup">
+                <span class="hover-text">Everything Everywhere All At Once (2022)</span>
+                </a>
+            </div>
+            <div class="rectangle y1970s">
+                <a href="ACOhair.html" target="A Clockwork Orange Hair & Makeup">
+                <img src="images/ACO_hair1.jpeg" alt="A Clockwork Orange Hair & Makeup">
+                <span class="hover-text">A Clockwork Orange (1971)</span>
+                </a>
+            </div>
+            <div class="rectangle y2000s">
+                <a href="TLTWATWhair.html" target="The Lion, The Witch, and The Wardrobe Hair">
+                <img src="images/Narnia_hair1.jpeg" alt="The Lion, The Witch, and The Wardrobe Hair">
+                <span class="hover-text">The Lion, The Witch, and the Wardrobe (2005)</span>
+                </a>
+            </div>
+        </div>
+
+
+    <!-- <script>
+        // initialize isotope
+        var $grid = $('.container').isotope({
+            itemSelector: '.rectangle',
+            layoutMode: 'fitRows'
+        });
+
+        // filter on button click
+        $("button").click(function(){
+            var filterValue = $(this).data("year");
+            $grid.isotope({ filter: filterValue });
+        });
+</script>
+
+            </script> -->
+
+<script>
+    const buttons = document.querySelectorAll("button");
+    const items = document.querySelectorAll(".rectangle");
+
+    buttons.forEach(button => {
+    button.addEventListener("click", () => {
+    const filter = button.getAttribute("data-year");
+
+    items.forEach(item => {
+      if (filter === "*" || item.classList.contains(filter.substring(1))) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
+      }
+    });
+  });
+});
+</script>
+
+    </body>
+</html>
