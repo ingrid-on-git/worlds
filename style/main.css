@@ -87,8 +87,8 @@ button {
 }
 
 .title {
-    padding-left: 315px;
-    padding-right: 315px;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .gallery {
