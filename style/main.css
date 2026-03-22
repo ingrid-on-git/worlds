@@ -8,8 +8,9 @@ body {
     border-radius: 14px; 
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: center; 
     padding: 0 20px;
+    gap: 40px;
 }
 
  .topmenu a {
