@@ -157,7 +157,9 @@ h3 {
 .about-section {
   display: flex;
   align-items: center;
-  gap: 40px;               
+  gap: 40px;
+    margin: auto;
+    max-width: 1240px;
 }
 
 .about {
