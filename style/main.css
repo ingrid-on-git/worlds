@@ -15,8 +15,9 @@ body {
  .topmenu a {
     color: white;
     font-size: 16px;
-    margin: 0 120px;
+    margin: 0;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .header { 
